@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .ball{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            border-radius: 50%;
+            position: relative;
+            top: 200px;
+            left: 50px;
+            animation: moving;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moving {
+            from{
+                top: 200px;
+                left: 50px;
+                height: 100px;
+                width: 100px;
+            }
+
+            to{
+                top: 200px;
+                left: 900px;
+                height: 300px;
+                width: 300px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="ball"></div>
+    
+</body>
+</html>

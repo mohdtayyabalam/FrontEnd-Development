@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: rgb(243, 240, 240);
+        }
+
+        .container{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            padding-top: 100px;
+        }
+
+        .container .item1 {
+            height: 300px;
+            width: 500px;
+            border: 2px solid white;
+            box-shadow: 4px 3px white;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background-color: white;
+        }
+
+        .container .item1 .thumbnail {
+            height: 170px; 
+            background-color: grey;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            line-height: 150px;
+        }
+
+        .container .item1 p{
+            padding: 0 20px;
+            font-size: 15px;
+            line-height: 20px;
+            background-color: white;
+        }
+
+        .container .item1 .button{
+            padding: 0 20px;
+            background-color: white;
+        }
+        .container .item1 .button button{
+            padding: 5px 15px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="item1">
+            <div class="thumbnail">Thumbnail</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi assumenda enim reiciendis aspernatur blanditiis voluptatibus quas accusamus natus officia cumque.</p>
+            <div class="button">
+                <button>View</button>
+                <button>Edit</button>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="thumbnail">Thumbnail</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi assumenda enim reiciendis aspernatur blanditiis voluptatibus quas accusamus natus officia cumque.</p>
+            <div class="button">
+                <button>View</button>
+                <button>Edit</button>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="thumbnail">Thumbnail</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi assumenda enim reiciendis aspernatur blanditiis voluptatibus quas accusamus natus officia cumque.</p>
+            <div class="button">
+                <button>View</button>
+                <button>Edit</button>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="thumbnail">Thumbnail</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi assumenda enim reiciendis aspernatur blanditiis voluptatibus quas accusamus natus officia cumque.</p>
+            <div class="button">
+                <button>View</button>
+                <button>Edit</button>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="thumbnail">Thumbnail</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi assumenda enim reiciendis aspernatur blanditiis voluptatibus quas accusamus natus officia cumque.</p>
+            <div class="button">
+                <button>View</button>
+                <button>Edit</button>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="thumbnail">Thumbnail</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi assumenda enim reiciendis aspernatur blanditiis voluptatibus quas accusamus natus officia cumque.</p>
+            <div class="button">
+                <button>View</button>
+                <button>Edit</button>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

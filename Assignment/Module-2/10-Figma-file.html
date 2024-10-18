@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figma-File</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      nav {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 30px;
+        padding-left: 10px;
+      }
+
+      nav .logo {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      nav .links {
+        min-width: 50%;
+        /* border: 2px solid; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+        padding-left: 30px;
+      }
+
+      nav .links a {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+      }
+
+      nav .log {
+        padding-left: 20px;
+      }
+
+      nav .log a {
+        padding-right: 20px;
+      }
+
+      nav .log button {
+        width: 169px;
+        height: 48px;
+        border-radius: 4px;
+        background-color: #ece5ff;
+        border: none;
+      }
+
+      nav .mobile-line {
+        display: none;
+      }
+
+      nav .mobile-line p {
+        font-size: 8px;
+      }
+
+      .section1 {
+        width: 100%;
+        height: auto;
+        /* border: 2px solid; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-top: 80px;
+      }
+
+      .section1 .part1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .section1 .part1 .save {
+        height: 32px;
+        width: 108px;
+        border-radius: 100px;
+        background-color: #81c43b;
+        color: white;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        line-height: 30px;
+        z-index: 1;
+      }
+
+      .section1 .part1 .get {
+        height: 32px;
+        width: 209px;
+        background-color: #f2f9eb;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 100px;
+        position: relative;
+        right: 25px;
+      }
+
+      .section1 .part2 {
+        font-size: 64px;
+        font-weight: 600;
+        width: 50%;
+        text-align: center;
+      }
+
+      .section1 .part3 {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        width: 50%;
+      }
+
+      .section1 .part4 {
+        width: 60%;
+        /* border: 2px solid; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .section1 .part4 input {
+        width: 319px;
+        height: 52px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        border: 1px solid #e1e5ea;
+        color: #97a5b5;
+        font-size: 16px;
+        font-weight: 400;
+        padding-left: 10px;
+      }
+
+      .section1 .part4 button {
+        width: 164px;
+        height: 52px;
+        border-radius: 4px;
+        background-color: #794cff;
+        border: 1px solid #794cff;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      .section2 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .section2 > img {
+        width: 60%;
+        height: 654px;
+      }
+
+      .section2 p {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .section2 .items {
+        /* border: 2px solid; */
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding-top: 30px;
+        text-align: center;
+        padding-bottom: 50px;
+      }
+
+      .section2 .items img {
+        width: 85px;
+        height: 26.11px;
+      }
+
+      .section3 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0ebfa;
+        padding-top: 10px;
+      }
+
+      .section3 .part1 {
+        width: 50%;
+        height: auto;
+        /* border: 2px solid; */
+      }
+
+      .section3 .part1 img {
+        width: 90%;
+        height: 518px;
+        padding: 10px 80px;
+      }
+
+      .section3 .part2 {
+        width: 50%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .section3 .part2 .item1,
+      .item2,
+      .item3,
+      .item4 {
+        border: 2px solid;
+        width: 60%;
+        padding: 20px;
+        border: none;
+      }
+
+      .section3 .part2 .item1 {
+        background-color: #f6f3fc;
+        border-left: 7px solid #794cff;
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+      }
+
+      .section3 .part2 div > h3 {
+        font-size: 18px;
+        font-weight: 600;
+        padding-bottom: 7px;
+      }
+
+      .section3 .part3 div > p {
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .section4 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 60px;
+      }
+
+      .section4 .items {
+        padding-top: 40px;
+        width: 90%;
+        height: auto;
+        /* border: 2px solid; */
+        display: grid;
+        grid-template-columns: auto auto auto;
+        row-gap: 30px;
+        column-gap: 40px;
+      }
+
+      .section4 .items .item1 {
+        /* border: 2px solid; */
+        padding: 10px;
+      }
+
+      .section4 .items .item1 img {
+        padding-bottom: 10px;
+      }
+
+      .section4 .items .item1 .title {
+        padding-bottom: 10px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .section4 .items .item1 p {
+        font-size: 16px;
+      }
+
+      .section4 .items .item-button button {
+        display: none;
+      }
+
+      .section5 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0ebfa;
+      }
+
+      .section5 .part1 {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        /* border: 2px solid; */
+      }
+
+      .section5 .part1 h1 {
+        width: 50%;
+        font-size: 40px;
+        font-weight: 600;
+      }
+
+      .section5 .part1 p {
+        width: 50%;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .section5 .part1 .btn {
+        width: 50%;
+      }
+
+      .section5 .part1 button {
+        width: 164px;
+        height: 52px;
+        border-radius: 4px;
+        border: none;
+        background-color: #796eff;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .section5 .part2 {
+        width: 60%;
+        height: auto;
+        /* border: 2px solid; */
+        padding: 50px 0;
+      }
+
+      .section5 .part2 img {
+        width: 90%;
+        height: auto;
+      }
+
+      .section6 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 70px;
+        padding-bottom: 50px;
+      }
+
+      .section6 h1 {
+        height: auto;
+        width: 394px;
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .section6 > p {
+        height: auto;
+        width: 543px;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .section6 .people {
+        height: auto;
+        width: 70%;
+        /* border: 2px solid; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 50px;
+        gap: 20px;
+      }
+
+      .section6 .people .first {
+        height: 90px;
+        width: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+      }
+
+      .section6 .people .border-change {
+        border-top: 4px solid #35414b;
+      }
+
+      .section6 .people .first > div :nth-child(1) {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .section6 .people .first > div :nth-child(2) {
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .section6 .playstore {
+        background-color: #796eff;
+        height: auto;
+        width: 90%;
+        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .section6 .playstore .part1 {
+        width: 45%;
+        height: auto;
+        /* border: 2px solid; */
+        font-size: 32px;
+        font-weight: 600;
+        color: white;
+        padding: 50px 20px;
+      }
+
+      .section6 .playstore .part2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 55%; */
+        gap: 30px;
+        padding-right: 20px;
+      }
+
+      .section7 {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        background-color: #1d2830;
+        color: white;
+        padding: 50px 0;
+      }
+
+      .section7 .company {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* border: 2px solid red; */
+        padding-left: 80px;
+      }
+
+      .section7 .company h4 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .section7 .company div {
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .section7 .company .downarrow {
+        display: none;
+      }
+
+      .section7 .company .downarrow img {
+        width: 15px;
+        height: 15px;
+        filter: invert();
+      }
+
+      .section7 .image-item {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .section7 .image-item img {
+        filter: invert();
+        width: 40%;
+      }
+
+      footer {
+        width: 100%;
+        height: auto;
+        background-color: #1d2830;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+        padding: 20px 0;
+        margin-top: 1px;
+      }
+
+      footer .part1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      @media only screen and (max-width: 810px) {
+        nav {
+          justify-content: space-between;
+          padding-left: 40px;
+        }
+        nav .links {
+          justify-content: space-around;
+        }
+        nav .links a {
+          display: none;
+        }
+        nav .links .log button {
+          display: none;
+        }
+        nav .mobile-line {
+          display: block;
+        }
+        .section1 .part1 .save {
+          height: 32px;
+          width: 108px;
+          border-radius: 100px;
+          background-color: #81c43b;
+          color: white;
+          font-weight: 500;
+          font-size: 16px;
+          text-align: center;
+          line-height: 30px;
+          z-index: 1;
+          display: none;
+        }
+        .section1 .part1 .get {
+          position: static;
+        }
+        .section1 .part2 {
+          font-size: 32px;
+          font-weight: 600;
+          width: 50%;
+          text-align: center;
+          align-content: center;
+        }
+        .section1 .part3 {
+          font-size: 16px;
+          font-weight: 400;
+          text-align: center;
+          width: 60%;
+        }
+        .section1 .part4 {
+          display: flex;
+          flex-direction: column;
+        }
+        .section1 .part4 input {
+          width: 100%;
+        }
+        .section1 .part4 button {
+          width: 100%;
+        }
+        .section2 img {
+          width: 90%;
+          height: 273px;
+        }
+        .section2 .items {
+          /* border: 2px solid; */
+          width: 90%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          padding-top: 30px;
+        }
+        .section2 .items img {
+          width: 60px;
+          height: 16.11px;
+        }
+        .section3 {
+          flex-direction: column;
+          background-color: white;
+        }
+        .section3 .part1 {
+          padding-top: 20px;
+          width: 90%;
+        }
+        .section3 .part2 {
+          width: 100%;
+          padding-top: 30px;
+        }
+        .section3 .part2 .item1,
+        .item2,
+        .item3,
+        .item4 {
+          border: 2px solid;
+          width: 80%;
+          padding: 20px;
+          border: none;
+        }
+        .section3 .part2 .item1 {
+          border-left: none;
+          border-top: none;
+          border-right: none;
+          border-bottom: 7px solid #794cff;
+        }
+        .section4 .items {
+          padding-top: 40px;
+          width: 90%;
+          height: auto;
+          /* border: 2px solid; */
+          display: grid;
+          grid-template-columns: auto;
+          row-gap: 30px;
+          column-gap: 40px;
+          text-align: center;
+        }
+        .section4 .items .item-button {
+          justify-self: center;
+          padding-bottom: 60px;
+        }
+        .section4 .items .item-button button {
+          display: block;
+          background-color: #ece5ff;
+          border: 1px solid #ece5ff;
+          height: 52px;
+          width: 318px;
+          color: #7259fa;
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .section4 .items :nth-child(4) {
+          display: none;
+        }
+        .section4 .items :nth-child(5) {
+          display: none;
+        }
+        .section4 .items :nth-child(6) {
+          display: none;
+        }
+        .section5 {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column-reverse;
+          background-color: #f0ebfa;
+        }
+        .section5 .part1 {
+          width: 90%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 25px;
+          /* border: 2px solid; */
+          text-align: center;
+        }
+        .section5 .part1 h1 {
+          width: 60%;
+          font-size: 40px;
+          font-weight: 600;
+        }
+
+        .section5 .part1 p {
+          width: 80%;
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        .section5 .part1 .btn {
+          width: 80%;
+          padding-bottom: 40px;
+        }
+
+        .section5 .part1 button {
+          width: 100%;
+          height: 52px;
+          border-radius: 4px;
+          border: none;
+          background-color: #796eff;
+          color: white;
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .section5 .part2 {
+          text-align: center;
+          width: 90%;
+          height: auto;
+          /* border: 2px solid; */
+          padding: 50px 0;
+        }
+        .section6 h1 {
+          height: auto;
+          width: 322px;
+          font-size: 18px;
+          font-weight: 600;
+          text-align: center;
+        }
+
+        .section6 > p {
+          height: auto;
+          width: 336px;
+          font-size: 18px;
+          font-weight: 400;
+          text-align: center;
+          line-height: 32px;
+        }
+        .section6 .people .first {
+          height: 90px;
+          width: 230px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          display: none;
+        }
+
+        .section6 .people .border-change {
+          border: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding-top: 30px;
+        }
+        .section6 .playstore {
+          background-color: #796eff;
+          height: auto;
+          width: 100%;
+          border-radius: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 10px;
+          padding-bottom: 50px;
+        }
+        .section6 .playstore .part1 {
+          width: 90%;
+          height: auto;
+          /* border: 2px solid; */
+          font-size: 32px;
+          font-weight: 600;
+          color: white;
+          padding: 50px 20px;
+          text-align: center;
+        }
+
+        .section6 .playstore .part2 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 80%;
+          gap: 30px;
+          padding-right: 20px;
+        }
+        .section6 .playstore .part2 img {
+          width: 50%;
+        }
+
+        .section7 {
+          width: 100%;
+          height: auto;
+          display: grid;
+          grid-template-columns: auto;
+          background-color: #1d2830;
+          color: white;
+          padding: 50px 0;
+          gap: 10px;
+        }
+        .section7 .company div {
+          font-size: 16px;
+          font-weight: 400;
+          display: none;
+        }
+
+        .section7 .company {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 10px;
+          padding-left: 60px;
+        }
+
+        .section7 .company .downarrow {
+          display: block;
+          padding-right: 80px;
+        }
+
+        .section7 .company .downarrow img {
+          background-color: transparent;
+          mix-blend-mode: color-dodge;
+        }
+
+        .section7 .image-item {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          padding-left: 60px;
+          padding-top: 10px;
+        }
+
+        .section7 .image-item img {
+          filter: invert();
+          width: 30%;
+        }
+
+        footer .part2 {
+          display: none;
+        }
+
+        footer {
+          justify-content: start;
+          padding-left: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">teamflow</div>
+
+      <div class="links">
+        <a href="">How it Works <img src="Materials/DownArrow.svg" alt="" /></a>
+        <a href="">Product <img src="Materials/DownArrow.svg" alt="" /></a>
+        <a href="">Pricing</a>
+        <a href="">Resources <img src="Materials/DownArrow.svg" alt="" /></a>
+
+        <div class="log">
+          <a href="">Log In</a>
+          <button>Get Started Free</button>
+        </div>
+
+        <div class="mobile-line">
+          <img src="Materials/ThreeLine.svg" alt="" />
+          <p>Menu</p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="section1">
+      <div class="part1">
+        <div class="save">Save 90%</div>
+        <div class="get">
+          Get account of $59 <img src="Materials/RightArrow.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="part2">
+        <h2>Manage the team everyone want to be on</h2>
+      </div>
+
+      <div class="part3">
+        <p>
+          Simple platform that lets you master what great managers do best, as
+          develop trust, collaborate, and drive team performance.
+        </p>
+      </div>
+
+      <div class="part4">
+        <input type="text" placeholder="name@yourcompany.com" />
+        <button>Try it free</button>
+      </div>
+    </div>
+
+    <div class="section2">
+      <img main-image src="Materials/Section2 Image.png" alt="" />
+
+      <p>TRUSTED BY OVER 10.000+ WORLD'S BEST TEAMS</p>
+
+      <div class="items">
+        <img src="Materials/Section2 Google.png" alt="" />
+        <img src="Materials/Section2 AirBnB.png" alt="" />
+        <img src="Materials/Section2 Facebook.png" alt="" />
+        <img src="Materials/Section2 HubSpot.png" alt="" />
+        <img src="Materials/Section2 Slack.png" alt="" />
+      </div>
+    </div>
+
+    <div class="section3">
+      <div class="part1">
+        <img src="Materials/Section3 img.png" alt="" />
+      </div>
+      <div class="part2">
+        <div class="item1">
+          <h3>Survey your team</h3>
+          <p>
+            Powerful questions that get to the heart of how team members really
+            feel.
+          </p>
+        </div>
+        <div class="item2">
+          <h3>Resolve issues quickly</h3>
+          <p>Anonymous messaging that connects managers and employees.</p>
+        </div>
+        <div class="item3">
+          <h3>Plan your 1-on-1s</h3>
+          <p>Plan meetings together and give a stake employees and teams.</p>
+        </div>
+        <div class="item4">
+          <h3>Track your progress</h3>
+          <p>
+            Easy-to-read reports and sharable results help managers and teams.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section4">
+      <h1>Make your work easier</h1>
+
+      <div class="items">
+        <div class="item1">
+          <img src="Materials/Team.svg" alt="" />
+          <div class="title">Team Surveys & Reports</div>
+          <p>
+            Short, anonymous surveys track your team's needs weekly so you can
+            focus.
+          </p>
+        </div>
+        <div class="item1">
+          <img src="Materials/Collabarative.svg" alt="" />
+          <div class="title">Collaborative 1:1</div>
+          <p>Build relationships by planning 1-on-1s and start meetings.</p>
+        </div>
+        <div class="item1">
+          <img src="Materials/Learning.svg" alt="" />
+          <div class="title">Learning Center</div>
+          <p>
+            Quickly get solutions tailored to your personal challenges from the
+            manager.
+          </p>
+        </div>
+        <div class="item1">
+          <img src="Materials/Anonymous.svg" alt="" />
+          <div class="title">Anonymous Messaging</div>
+          <p>Develop trust in a safe channel for important conversations.</p>
+        </div>
+        <div class="item1">
+          <img src="Materials/conversation.svg" alt="" />
+          <div class="title">Conversation Engine</div>
+          <p>Communicate confidently with recommended talking points.</p>
+        </div>
+        <div class="item1">
+          <img src="Materials/Exclusive.svg" alt="" />
+          <div class="title">Exclusives Manager</div>
+          <p>
+            Access manager tips, activities and best practices from our team of
+            experts.
+          </p>
+        </div>
+        <div class="item1 item-button">
+          <button>View More Benefits</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section5">
+      <div class="part1">
+        <h1>We work how you work everyday</h1>
+        <p>
+          Since the easiest things to use actually get used, we adapts to the
+          way your team works - not the other way around.
+        </p>
+        <div class="btn"><button>Get Started Free</button></div>
+      </div>
+
+      <div class="part2">
+        <img src="Materials/Section5 img.png" alt="" />
+      </div>
+    </div>
+
+    <div class="section6">
+      <h1>Why customers love working with us</h1>
+      <p>
+        “It's amazing what has helped me learn about my team. I don't worry
+        about blindspots anymore, and 1-on-1s have never been more productive.
+        The team loves it.”
+      </p>
+
+      <div class="people">
+        <div class="first border-change">
+          <img src="Materials/Section6 img1.png" alt="" />
+          <div>
+            <p>Jorge Roberstson</p>
+            <p>CS at Google</p>
+          </div>
+        </div>
+        <div class="first">
+          <img src="Materials/Section6 img2.png" alt="" />
+          <div>
+            <p>Francisco Bell</p>
+            <p>Designer at Microsoft</p>
+          </div>
+        </div>
+        <div class="first">
+          <img src="Materials/Section6 img3.png" alt="" />
+          <div>
+            <p>Beth Fox</p>
+            <p>Developer at Airbnb</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="playstore">
+        <div class="part1">
+          84% of employees who use trust their direct manager
+        </div>
+        <div class="part2">
+          <img src="Materials/PlayStore.png" alt="" />
+          <img src="Materials/Apple store.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section7">
+      <div class="company">
+        <h4>Company</h4>
+        <div>About Us</div>
+        <div>Blog</div>
+        <div>Carrers</div>
+        <div>Contact Us</div>
+        <div class="downarrow">
+          <img src="Materials/DownArrow.svg" alt="" />
+        </div>
+      </div>
+      <div class="company">
+        <h4>Support</h4>
+        <div>Help Center</div>
+        <div>Safety Center</div>
+        <div>Community</div>
+        <div class="downarrow">
+          <img src="Materials/DownArrow.svg" alt="" />
+        </div>
+      </div>
+      <div class="company">
+        <h4>Legal</h4>
+        <div>Cokkies Policy</div>
+        <div>Privacy Policy</div>
+        <div>Terms of Services</div>
+        <div class="downarrow">
+          <img src="Materials/DownArrow.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="image-item">
+        <h3>Install App</h3>
+        <img src="Materials/PlayStore.png" alt="" />
+        <img src="Materials/Apple store.png" alt="" />
+      </div>
+    </div>
+
+    <footer>
+      <div class="part1">
+        <img src="Materials/copyright logo.svg" alt="" />2020 - All rights
+        reserved
+      </div>
+      <div class="part2">
+        <img src="Materials/footer-instagram.png" alt="" />
+        <img src="Materials/footer-xbox.png" alt="" />
+        <img src="Materials/footer-twitter.png" alt="" />
+        <img src="Materials/footer-youtube.png" alt="" />
+      </div>
+    </footer>
+  </body>
+</html>

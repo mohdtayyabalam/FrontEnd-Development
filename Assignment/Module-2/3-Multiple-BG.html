@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple BG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+
+        #container .part1{
+            width: 50%;
+            height: 100%;
+            background-color: rgb(43, 40, 40);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            text-align: right;
+            gap: 10px;
+        }
+
+        #container .part1 h1{
+            /* text-align: right; */
+            padding-right: 100px;
+            color: white;
+
+        }
+
+        #container .part1 .first{
+            padding-right: 100px;
+            padding-top: 40px;
+        }
+
+        #container .part1 .first h2{
+            font-size: 23px;
+            color: red;
+            padding-bottom: 15px;
+        }
+        #container .part1 .first p{
+            font-size: 20px;
+            padding-left: 150px;
+            color: white;
+        }
+
+        #container .part1 .first > div{
+            height: 90px;
+            width: 90px;
+            border: 2px solid;
+            border-radius: 50%;
+            background-color: blue;
+            position: relative;
+            /* left: 870px;
+            bottom: 75px; */
+            left: 107%;
+            bottom: 54%;
+            z-index: 1;
+            background-image: url("Materials/footer-twitter.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #container .part1 .second{
+            padding-right: 100px;
+        }
+
+        #container .part1 .second h2{
+            font-size: 23px;
+            color: red;
+            padding-bottom: 15px;
+        }
+        #container .part1 .second p{
+            font-size: 20px;
+            padding-left: 150px;
+            color: white;
+        }
+
+        #container .part1 .second > div{
+            height: 90px;
+            width: 90px;
+            border: 2px solid;
+            border-radius: 50%;
+            background-color: blue;
+            position: relative;
+            /* left: 870px;
+            bottom: 75px; */
+            left: 107%;
+            bottom: 54%;
+            z-index: 1;
+            background-image: url("Materials/footer-twitter.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #container .part1 .third{
+            padding-right: 100px;
+        }
+
+        #container .part1 .third h2{
+            font-size: 23px;
+            color: red;
+            padding-bottom: 15px;
+        }
+        #container .part1 .third p{
+            font-size: 20px;
+            padding-left: 150px;
+            color: white;
+        }
+
+        #container .part1 .third > div{
+            height: 90px;
+            width: 90px;
+            border: 2px solid;
+            border-radius: 50%;
+            background-color: blue;
+            position: relative;
+            /* left: 870px;
+            bottom: 75px; */
+            left: 107%;
+            bottom: 54%;
+            z-index: 1;
+            background-image: url("Materials/footer-twitter.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #container .part2{
+            height: 100vh;
+            width: 50%;
+            background-image: url("https://thumbs.dreamstime.com/b/planet-earth-space-night-some-elements-image-furnished-nasa-52734504.jpg?w=768");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            opacity: 0.9;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <div class="part1">
+            
+            <h1>OUR SERVICES</h1>
+
+            <div class="first">
+                <h2>WEB DESIGN</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta repellat ipsa nihil expedita facere aperiam dolorem, aliquam tempora praesentium ad.
+                    <div></i></div>
+                </p>
+            </div>
+
+            <div class="second">
+                <h2>PRINT DESIGN</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta repellat ipsa nihil expedita facere aperiam dolorem, aliquam tempora praesentium ad.
+                    <div></div>
+                </p>
+            </div>
+
+            <div class="third">
+                <h2>PHOTOGRAPHY</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta repellat ipsa nihil expedita facere aperiam dolorem, aliquam tempora praesentium ad.
+                    <div></div>
+                </p>
+            </div>
+        </div>
+
+        <div class="part2"></div>
+
+    </div>
+    
+</body>
+</html>

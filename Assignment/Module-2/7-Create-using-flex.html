@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create using flex</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .main-container{
+            width: 100%;
+            height: 50vh;
+            /* border: 2px solid; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 0 20px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .main-container .item1{
+            height: 70%;
+            width: 250px;
+            /* border: 2px solid; */
+            padding: 20px;
+            background-color:aqua ;
+            overflow: hidden;
+        }
+
+        .main-container .item1 h2{
+            padding-bottom: 20px;
+        }
+
+        .main-container .item2{
+            height: 70%;
+            width: 250px;
+            /* border: 2px solid; */
+            padding: 20px;
+            background-color: aqua;
+            overflow: hidden;
+        }
+
+        .main-container .item2 h2{
+            padding-bottom: 20px;
+        }
+
+        .main-container .item3{
+            height: 70%;
+            width: 500px;
+            /* border: 2px solid; */
+            padding: 10px;
+            background-color: aqua;
+            overflow: hidden;
+        }
+
+        .main-container .item3 .four-button{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5px;
+            padding-bottom: 20px;
+        }
+        .main-container .item3 .four-button button{
+            height: 23px;
+            width: 90px;
+            font-weight: 600;
+            border-radius: 3px;
+            border: none;
+        }
+
+        .main-container .item3 .one-button button{
+            height: 23px;
+            width: 100%;
+            font-weight: 600;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .main-container .item3 p{
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+
+        <div class="item1">
+            <h2>First article</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis beatae repudiandae perspiciatis eligendi est eum nisi. Praesentium quos laboriosam nesciunt nam possimus perferendis id!</p>
+        </div>
+
+        <div class="item2">
+            <h2>First article</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis beatae repudiandae perspiciatis eligendi est eum nisi. Praesentium quos laboriosam nesciunt nam possimus perferendis id!</p>
+        </div>
+
+        <div class="item3">
+            <div class="four-button">
+                <button>Smile</button>
+                <button>Laugh</button>
+                <button>Wink</button>
+                <button>Shrug</button>
+            </div>
+            <div class="one-button">
+                <button>Blush</button>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique dolor nam atque sint sequi voluptatum cupiditate soluta. Natus, suscipit qui ex obcaecati assumenda dignissimos adipisci tempora cupiditate ipsa. Recusandae, ex.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quisquam voluptatum ullam obcaecati numquam laudantium repellendus nostrum ab, quo atque mollitia temporibus iste saepe esse consequatur, ut praesentium itaque at.</p>
+        </div>
+
+    </div>
+    
+</body>
+</html>
