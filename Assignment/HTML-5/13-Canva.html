@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            width: 700px;
+            height: 300px;
+            border: 2px solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: auto;
+        }
+
+        #square{
+            background-color: red;
+            border-radius: 10px;
+        }
+
+        #circle{
+            background-color: magenta;
+            border-radius: 50%;
+            background-position: center;
+            background-size: contain;
+        }
+
+        #rectangle{
+            background-color: orange;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <canvas id="square" height="200px" width="200px"></canvas>
+        <canvas id="circle" height="200px" width="200px"></canvas>
+        <canvas id="rectangle" height="100px" width="200px"></canvas>
+    </div>
+    
+    
+</body>
+</html>
