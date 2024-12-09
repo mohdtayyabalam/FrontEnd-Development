@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" method="post" name="frm">
+      <label for="">Name</label>
+      <input type="text" name="name" id="name" /><br /><br />
+      <label for="">Age</label>
+      <input type="number" name="age" id="age" /><br /><br />
+      <label for="">Gender</label>
+      <input type="radio" name="gender" id="gender1" value="male" />Male
+      <input type="radio" name="gender" id="gender2" value="female" />Female
+      <br /><br />
+      <input type="button" value="Save" onclick="saveData()" />
+      <input type="text" id="userId" hidden />
+    </form>
+
+    <table border="2" cellpadding="10px" style="margin-top: 10px">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="alldata"></tbody>
+    </table>
+
+    <script>
+      let userdata = [];
+      let name = document.getElementById("name");
+      let age = document.getElementById("age");
+      let male = document.getElementById("gender1");
+      let female = document.getElementById("gender2");
+      let userId = document.getElementById("userId");
+      let gender;
+
+      function saveData() {
+        document.querySelectorAll("input[type=radio]").forEach((r) => {
+          //checking which radio button is checked and assgning that into the "gender" variable
+          if (r.checked) {
+            gender = r.value;
+          }
+        });
+        let allData = JSON.parse(localStorage.getItem("userdata")); //getting the data from local storage and storing in the "allData" variable
+        let len = allData != null ? allData.length + 1 : 1; //checking if there is a data in the addData variable if is not setting the id to 1 otherwise setting id by adding 1 to the total length
+        if (userId.value == "") {
+          //Inserting the data
+          let obj = {
+            id: len,
+            Name: name.value,
+            Age: age.value,
+            Gender: gender,
+          };
+          userdata.push(obj);
+        } else {
+          //Updating the Data
+          let updatedData = allData.map((i) => {
+            console.log(i.id);
+            if (i.id == userId.value) {
+              i.Name = name.value;
+              i.Age = age.value;
+              i.Gender = gender;
+            }
+            return i;
+          });
+          userdata = updatedData; //Updating the userdata with the data in the updatedData variable
+        }
+
+        localStorage.setItem("userdata", JSON.stringify(userdata)); //setting the data in the local storage
+        document.frm.reset(); //resetting the whole form
+        male.checked = false; //removing checked attribute of male button
+        female.checked = false; //removing checked attribute of female button
+        displayData();
+      }
+
+      function displayData() {
+        let allData = JSON.parse(localStorage.getItem("userdata")); //storing userdata into the "allData" variable
+        if (allData != null) {
+          let txt = "";
+          allData.map((e) => {
+            //storing and setting all the data in the txt variable one by one and pushing it in the HTML Document
+            txt += `
+                    <tr>
+                        <td>${e.id}</td>
+                        <td>${e.Name}</td>
+                        <td>${e.Age}</td>
+                        <td>${e.Gender}</td>
+                        <td>
+                        <button onclick="editData(${e.id})">Edit</button>
+                        <button onclick="delData(${e.id})">Delete</button>
+                    </td>
+                    </tr>
+            `;
+            document.getElementById("alldata").innerHTML = txt; //displaying data in the HTML Document
+          });
+        }
+      }
+
+      function delData(id) {
+        let allData = JSON.parse(localStorage.getItem("userdata")); //storing userdata into the "allData" variable
+
+        let res = allData.filter((i) => {
+          //storing the data that does not match the id into the "res" variable hence deteting the data that we clicked
+          return i.id != id;
+        });
+
+        let j = 1; // it works as the id
+        let finalData = res.map((i) => {
+          //storing data in the "finalData" variable with the new id
+          i.id = j++; //setting the new id for the data
+          return i;
+        });
+        userdata = finalData; // Updating the data in the userdata variable
+        localStorage.setItem("userdata", JSON.stringify(userdata)); //setting the data into the local storage
+        displayData(); //displaying the data
+      }
+
+      function editData(id) {
+        male.checked = false; //removing checked attribute of male button
+        female.checked = false; //removing checked attribute of female button
+        let allData = JSON.parse(localStorage.getItem("userdata")); //storing userdata into the "allData" variable
+
+        let res = allData.find((i) => {
+          //storing the data of the id we clicked in the "res" variable
+          return i.id == id;
+        });
+        name.value = res.Name; //assigning the name in the name-input
+        age.value = res.Age; //assigning the age in the age-input
+        userId.value = res.id; //assigning the id in the value of userId
+        if (res.Gender == "male") {
+          //checking the if the gender is male or female
+          male.checked = true; //if male setting the male button checked
+        } else {
+          female.checked = true; //if female setting the female button checked
+        }
+        displayData(); //displaying the data
+      }
+
+      displayData(); //displaying the data on the load of the page
+    </script>
+  </body>
+</html>
